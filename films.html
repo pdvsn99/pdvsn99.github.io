@@ -40,7 +40,6 @@
       margin: 0;
       font-size: 1.5rem;
       color: #F1668B; /* Pink accent for the title */
-      /* Removed blur for clarity */
       filter: none;
     }
 
@@ -74,19 +73,26 @@
       color: #F0F0F0;
     }
 
-    /* Link styling */
-    a {
-      color: #F0F0F0;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     .film-text p {
       margin: 0;
       line-height: 1.4;
+      margin-bottom: 1rem; /* some breathing room before the button */
+    }
+
+    /* A styled watch button */
+    .watch-button {
+      display: inline-block;
+      background-color: #F1668B;
+      color: #FFF;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none; /* ensures link text styling is removed */
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .watch-button:hover {
+      background-color: #ff729d; /* slightly lighter pink on hover */
     }
 
     @keyframes fadeIn {
@@ -96,7 +102,6 @@
   </style>
 </head>
 <body>
-
   <!-- Navigation area -->
   <div class="nav">
     <a href="./index.html">home</a>
@@ -106,33 +111,25 @@
   <div class="container">
     <!-- Film 1 -->
     <div class="film">
-      <a href="https://www.youtube.com/watch?v=3D2MKY4uDA4" target="_blank">
-        <img src="sloansyposter.jpg" alt="Poster for Film 1">
-      </a>
+      <img src="sloansyposter.jpg" alt="Poster for Film 1">
       <div class="film-text">
-        <h2>
-          <a href="https://www.youtube.com/watch?v=3D2MKY4uDA4" target="_blank">
-            "Sloansy"
-          </a>
-        </h2>
+        <h2>“Sloansy”</h2>
         <p>On a Scottish council estate in 1999, Jeanie struggles to raise her infant son alone. When concerned neighbors alert the authorities, she faces the grim reality of losing everything. Just as hope fades, a mysterious man steps in with an offer—one that could save her or lead her down a dangerous path.</p>
+        <a class="watch-button" href="https://www.youtube.com/watch?v=3D2MKY4uDA4" target="_blank">Watch</a>
       </div>
     </div>
 
     <!-- Film 2 -->
     <div class="film">
-      <a href="https://youtu.be/1Ty29yOT98E" target="_blank">
-        <img src="swyposter.jpg" alt="Poster for Film 2">
-      </a>
+      <img src="swyposter.jpg" alt="Poster for Film 2">
       <div class="film-text">
-        <h2>
-          <a href="https://youtu.be/1Ty29yOT98E" target="_blank">
-            Swimming With You
-          </a>
-        </h2>
+        <h2>Swimming With You</h2>
         <p>After a hookup goes wrong, Rhys and Lucas find themselves locked out of their car, stuck in awkward silence. As they talk, frustration turns to unexpected connection. When a sharp-witted recovery worker arrives, she sizes them up with a knowing smile—turning their night into something neither of them expected.</p>
+        <a class="watch-button" href="https://youtu.be/1Ty29yOT98E" target="_blank">Watch</a>
       </div>
     </div>
+
+    <!-- Additional films... -->
 
   </div>
 </body>
