@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>pdvsn</title>
+  <!-- Favicon: a simple pink box -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23F1668B'/></svg>">
   <style>
     html, body {
       height: 100%;
@@ -14,6 +16,7 @@
     }
     .container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100%;
@@ -22,13 +25,25 @@
     .container h1 {
       color: #fff;
       font-size: 3rem;
-      filter: blur(1.5px);
+      filter: blur(0.5px);
+      animation: fadeIn 1s ease-in-out;
+    }
+    .container p {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>pdvsn</h1>
+    <p>A quiet space in a noisy world.</p>
   </div>
 </body>
 </html>
