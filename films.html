@@ -8,19 +8,46 @@
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #F1668B;
+      background-color: #1C1C1C; /* Dark background */
       font-family: "Arial Narrow", Arial, sans-serif;
-      color: #fff;
+      color: #F0F0F0;
     }
+
+    /* Navigation styling */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Spread out 'home' and 'films' */
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #333;
+    }
+
+    /* Home link on the left */
+    .nav a {
+      color: #F1668B; /* Pink accent for the link */
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-right: 1rem;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Title on the right */
+    .nav h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #F1668B; /* Pink accent for the title */
+      /* Removed blur for clarity */
+      filter: none;
+    }
+
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      filter: blur(1px);
     }
 
     /* Each film block */
@@ -28,15 +55,15 @@
       display: flex;
       align-items: flex-start;
       margin-bottom: 2rem;
-      /* optional animation if you want a fade in */
       animation: fadeIn 1s ease-in-out;
     }
 
+    /* Poster styling */
     .film img {
       width: 100px;
       height: auto;
       margin-right: 1rem;
-      border: 2px solid #fff;
+      border: 2px solid #F1668B; /* Pink accent border */
       border-radius: 6px;
       cursor: pointer;
     }
@@ -44,11 +71,12 @@
     .film h2 {
       margin: 0 0 0.5rem;
       font-size: 1.5rem;
+      color: #F0F0F0;
     }
 
     /* Link styling */
     a {
-      color: #fff;
+      color: #F0F0F0;
       text-decoration: none;
     }
 
@@ -68,9 +96,14 @@
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <!-- Navigation area -->
+  <div class="nav">
+    <a href="./index.html">home</a>
     <h1>films</h1>
-    
+  </div>
+
+  <div class="container">
     <!-- Film 1 -->
     <div class="film">
       <a href="https://www.youtube.com/watch?v=3D2MKY4uDA4" target="_blank">
@@ -82,7 +115,7 @@
             "Sloansy"
           </a>
         </h2>
-        <p>Jeanie Harlow struggles to raise her infant son alone on a Scottish council estate in 1999. When her neighbours report her neglectful ways to the authorities, she’s left with no options and a desolate future. Then, she’s approached by a mysterious man with a dubious offer.</p>
+        <p>On a Scottish council estate in 1999, Jeanie struggles to raise her infant son alone. When concerned neighbors alert the authorities, she faces the grim reality of losing everything. Just as hope fades, a mysterious man steps in with an offer—one that could save her or lead her down a dangerous path.</p>
       </div>
     </div>
 
@@ -97,22 +130,7 @@
             Swimming With You
           </a>
         </h2>
-        <p>Two boys get locked out of their car after a hookup goes wrong. It’s a bit awkward in the silence, as both are obviously annoyed about the situation. As they get to chatting, we start to see them bond over small things.</p>
-      </div>
-    </div>
-
-    <!-- Film 3 -->
-    <div class="film">
-      <a href="https://youtube.com/YOUR_THIRD_FILM" target="_blank">
-        <img src="poster3.jpg" alt="Poster for Film 3">
-      </a>
-      <div class="film-text">
-        <h2>
-          <a href="https://youtube.com/YOUR_THIRD_FILM" target="_blank">
-            Title of Film #3
-          </a>
-        </h2>
-        <p>Short synopsis of Film #3. Keep the excitement going by giving a quick overview or teaser of its content.</p>
+        <p>After a hookup goes wrong, Rhys and Lucas find themselves locked out of their car, stuck in awkward silence. As they talk, frustration turns to unexpected connection. When a sharp-witted recovery worker arrives, she sizes them up with a knowing smile—turning their night into something neither of them expected.</p>
       </div>
     </div>
 
