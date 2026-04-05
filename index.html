@@ -53,21 +53,14 @@
       text-align: center;
       filter: blur(1px);
       transition: all 0.2s ease;
-      position: relative;
     }
 
-    /* intentional imperfections */
-    .link:nth-child(1) {
-      transform: rotate(-1deg) translateX(-6px);
-    }
-
-    .link:nth-child(2) {
-      transform: rotate(1deg) translateX(6px);
-    }
-
-    .link:nth-child(3) {
-      transform: rotate(-0.5deg) translateX(-3px);
-    }
+    /* staggered layout */
+    .link:nth-child(1) { transform: rotate(-1deg) translateX(-6px); }
+    .link:nth-child(2) { transform: rotate(1deg) translateX(6px); }
+    .link:nth-child(3) { transform: rotate(-0.5deg) translateX(-3px); }
+    .link:nth-child(4) { transform: rotate(0.8deg) translateX(4px); }
+    .link:nth-child(5) { transform: rotate(-0.8deg) translateX(-5px); }
 
     .link:hover {
       background: #fff;
@@ -99,6 +92,8 @@
     <div class="links">
       <a class="link" href="https://films.pdvsn.com">films</a>
       <a class="link" href="https://carbclub.pdvsn.com">carb club</a>
+      <a class="link" href="https://rsvp.pdvsn.com">rsvp</a>
+      <a class="link" href="https://utilities.pdvsn.com">Ousley Utilities</a>
       <a class="link" href="https://instagram.com/pdvsn99" target="_blank">contact</a>
     </div>
 
