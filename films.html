@@ -3,96 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <title>films // pdvsn</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23F1668B'/></svg>">
   <style>
-    /* Basic page styling */
     html, body {
+      height: 100%;
       margin: 0;
-      padding: 0;
-      background-color: #1C1C1C; /* Dark background */
+      background-color: #F1668B;
       font-family: "Arial Narrow", Arial, sans-serif;
-      color: #F0F0F0;
-    }
-
-    /* Navigation styling */
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; /* Spread out 'home' and 'films' */
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #333;
-    }
-
-    /* Home link on the left */
-    .nav a {
-      color: #F1668B; /* Pink accent for the link */
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: bold;
-      margin-right: 1rem;
-    }
-
-    .nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Title on the right */
-    .nav h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      color: #F1668B; /* Pink accent for the title */
-      filter: none;
+      -webkit-font-smoothing: none;
+      -moz-osx-font-smoothing: grayscale;
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><rect width="8" height="8" fill="%23FFFFFF"/></svg>') 4 4, auto;
     }
 
     .container {
-      max-width: 800px;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;
+      text-align: center;
       padding: 2rem;
+      box-sizing: border-box;
     }
 
-    /* Each film block */
-    .film {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 2rem;
+    h1 {
+      color: #fff;
+      font-size: 3rem;
+      margin: 0;
+      filter: blur(1.5px);
       animation: fadeIn 1s ease-in-out;
     }
 
-    /* Poster styling */
-    .film img {
-      width: 100px;
-      height: auto;
-      margin-right: 1rem;
-      border: 2px solid #F1668B; /* Pink accent border */
-      border-radius: 6px;
-      cursor: pointer;
+    .links,
+    .films {
+      color: #fff;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+      filter: blur(1px);
     }
 
-    .film h2 {
-      margin: 0 0 0.5rem;
-      font-size: 1.5rem;
-      color: #F0F0F0;
+    a {
+      color: #fff;
+      text-decoration: none;
     }
 
-    .film-text p {
-      margin: 0;
-      line-height: 1.4;
-      margin-bottom: 1rem; /* some breathing room before the button */
+    a:hover {
+      text-decoration: underline;
     }
 
-    /* A styled watch button */
-    .watch-button {
-      display: inline-block;
-      background-color: #F1668B;
-      color: #FFF;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      text-decoration: none; /* ensures link text styling is removed */
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .watch-button:hover {
-      background-color: #ff729d; /* slightly lighter pink on hover */
+    .films div {
+      margin: 0.5rem 0;
     }
 
     @keyframes fadeIn {
@@ -102,35 +63,17 @@
   </style>
 </head>
 <body>
-  <!-- Navigation area -->
-  <div class="nav">
-    <a href="./index.html">home</a>
-    <h1>films</h1>
-  </div>
-
   <div class="container">
-    <!-- Film 1 -->
-    <div class="film">
-      <img src="sloansyposter.jpg" alt="Poster for Film 1">
-      <div class="film-text">
-        <h2>“Sloansy”</h2>
-        <p>On a Scottish council estate in 1999, Jeanie struggles to raise her infant son alone. When concerned neighbors alert the authorities, she faces the grim reality of losing everything. Just as hope fades, a mysterious man steps in with an offer—one that could save her or lead her down a dangerous path.</p>
-        <a class="watch-button" href="https://www.youtube.com/watch?v=3D2MKY4uDA4" target="_blank">Watch</a>
-      </div>
+    <h1>films</h1>
+
+    <div class="films">
+      <div>Sloansy // <a href="https://www.youtube.com/watch?v=3D2MKY4uDA4" target="_blank" rel="noopener noreferrer">watch</a></div>
+      <div>Swimming With You // <a href="https://youtu.be/1Ty29yOT98E" target="_blank" rel="noopener noreferrer">watch</a></div>
     </div>
 
-    <!-- Film 2 -->
-    <div class="film">
-      <img src="swyposter.jpg" alt="Poster for Film 2">
-      <div class="film-text">
-        <h2>Swimming With You</h2>
-        <p>After a hookup goes wrong, Rhys and Lucas find themselves locked out of their car, stuck in awkward silence. As they talk, frustration turns to unexpected connection. When a sharp-witted recovery worker arrives, she sizes them up with a knowing smile—turning their night into something neither of them expected.</p>
-        <a class="watch-button" href="https://youtu.be/1Ty29yOT98E" target="_blank">Watch</a>
-      </div>
+    <div class="links">
+      <a href="./index.html">home</a>
     </div>
-
-    <!-- Additional films... -->
-
   </div>
 </body>
 </html>
