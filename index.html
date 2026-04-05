@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>pdvsn</title>
-  <!-- Favicon: a simple pink box -->
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23F1668B'/></svg>">
+
   <style>
     html, body {
       height: 100%;
@@ -13,8 +14,9 @@
       font-family: "Arial Narrow", Arial, sans-serif;
       -webkit-font-smoothing: none;
       -moz-osx-font-smoothing: grayscale;
-      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><rect width="8" height="8" fill="%23FFFFFF"/></svg>') 4 4, auto;
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="8" height="8" fill="%23FFFFFF"/></svg>') 4 4, auto;
     }
+
     .container {
       display: flex;
       flex-direction: column;
@@ -23,46 +25,85 @@
       height: 100%;
       text-align: center;
     }
-    .container h1 {
+
+    h1 {
       color: #fff;
       font-size: 3rem;
       filter: blur(1.5px);
+      margin-bottom: 2.5rem;
+      letter-spacing: 2px;
       animation: fadeIn 1s ease-in-out;
     }
-    .container p {
-      color: #fff;
-      font-size: 1.2rem;
-      margin-top: 1rem;
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      width: 240px;
       animation: fadeIn 1.5s ease-in-out;
     }
-    .links {
-      color: #fff;
-      font-size: 1rem;
-      margin-top: 1.5rem;
-      animation: fadeIn 2s ease-in-out;
-      filter: blur(1.0px);
-    }
-    .links a {
-      color: #fff;
+
+    .link {
+      display: block;
+      padding: 1rem;
       text-decoration: none;
-      margin: 0 0.5rem;
+      color: #fff;
+      border: 1px solid #fff;
+      font-size: 1rem;
+      text-align: center;
+      filter: blur(1px);
+      transition: all 0.2s ease;
+      position: relative;
     }
-    .links a:hover {
-      text-decoration: underline;
+
+    /* intentional imperfections */
+    .link:nth-child(1) {
+      transform: rotate(-1deg) translateX(-6px);
     }
+
+    .link:nth-child(2) {
+      transform: rotate(1deg) translateX(6px);
+    }
+
+    .link:nth-child(3) {
+      transform: rotate(-0.5deg) translateX(-3px);
+    }
+
+    .link:hover {
+      background: #fff;
+      color: #F1668B;
+      filter: blur(0);
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #fff;
+      opacity: 0.7;
+      filter: blur(1px);
+      animation: fadeIn 2s ease-in-out;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>pdvsn</h1>
+
     <div class="links">
-      <a href="./films.html">films</a> //
-      <a href="./projects.html">projects</a> //
-      <a href="https://instagram.com/pdvsn99" target="_blank">contact</a>
+      <a class="link" href="https://films.pdvsn.com">films</a>
+      <a class="link" href="https://carbclub.pdvsn.com">carb club</a>
+      <a class="link" href="https://instagram.com/pdvsn99" target="_blank">contact</a>
+    </div>
+
+    <div class="footer">
+      pdvsn.com
     </div>
   </div>
 </body>
