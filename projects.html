@@ -2,30 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects by pdvsn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>projects // pdvsn</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23F1668B'/></svg>">
   <style>
-    html, body {
+    :root {
+      --pink: #F1668B;
+      --white: #fff;
+      --panel: rgba(255, 255, 255, 0.1);
+      --border: rgba(255, 255, 255, 0.7);
+    }
+
+    html,
+    body {
       margin: 0;
-      padding: 0;
-      background-color: #F1668B;
+      min-height: 100%;
+      background-color: var(--pink);
       font-family: "Arial Narrow", Arial, sans-serif;
+      color: var(--white);
+      -webkit-font-smoothing: none;
+      -moz-osx-font-smoothing: grayscale;
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="8" height="8" fill="%23FFFFFF"/></svg>') 4 4, auto;
     }
+
     .container {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.2rem 1.2rem 2.8rem;
+      box-sizing: border-box;
     }
+
     h1 {
-      color: #fff;
-      font-size: 2rem;
-      filter: blur(1px);
+      margin: 0 0 0.8rem;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      filter: blur(1.4px);
+    }
+
+    .info-box {
+      border: 1px dashed var(--border);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.75rem;
+      margin-bottom: 1.2rem;
+      max-width: 580px;
+      filter: blur(0.8px);
+    }
+
+    .project-list {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .project-item {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      padding: 0.8rem;
+      filter: blur(0.8px);
+    }
+
+    .project-title {
+      margin: 0 0 0.25rem;
+      font-size: 1.06rem;
+    }
+
+    .project-meta {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 0.95rem;
+      line-height: 1.25;
+    }
+
+    a {
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.75);
+    }
+
+    a:hover {
+      text-decoration: underline;
+      filter: blur(0);
+    }
+
+    .links {
+      margin-top: 1.4rem;
+      filter: blur(0.8px);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Projects // Coming Soon</h1>
-  </div>
+  <main class="container">
+    <h1>projects</h1>
+
+    <section class="info-box" aria-label="about projects page">
+      This page is a directory of active builds and experiments. Quick context is included for each entry.
+    </section>
+
+    <section class="project-list" aria-label="projects list">
+      <article class="project-item">
+        <h2 class="project-title">Ousley Utilities</h2>
+        <p class="project-meta">Useful web tools and small practical apps. <a href="https://utilities.pdvsn.com" target="_blank" rel="noopener noreferrer">Open site</a></p>
+      </article>
+
+      <article class="project-item">
+        <h2 class="project-title">Carb Club</h2>
+        <p class="project-meta">Community-focused hub and updates. <a href="https://carbclub.pdvsn.com" target="_blank" rel="noopener noreferrer">Open site</a></p>
+      </article>
+
+      <article class="project-item">
+        <h2 class="project-title">RSVP</h2>
+        <p class="project-meta">Event responses and invite workflow. <a href="https://rsvp.pdvsn.com" target="_blank" rel="noopener noreferrer">Open site</a></p>
+      </article>
+    </section>
+
+    <div class="links">
+      <a href="./index.html">&larr; back to directory</a>
+    </div>
+  </main>
 </body>
 </html>
