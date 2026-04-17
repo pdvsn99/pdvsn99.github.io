@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pdvsn directory</title>
+  <title>pdvsn</title>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23F1668B'/></svg>">
 
@@ -42,19 +42,15 @@
       animation: fadeIn 0.9s ease-in-out;
     }
 
-    .intro {
-      margin: 0 0 1.8rem;
-      max-width: 620px;
-      opacity: 0.9;
-      filter: blur(0.8px);
-      animation: fadeIn 1.2s ease-in-out;
-    }
-
     .directory {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
       animation: fadeIn 1.35s ease-in-out;
+    }
+
+    .card--large {
+      grid-column: span 2;
     }
 
     .card {
@@ -109,23 +105,28 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    @media (max-width: 640px) {
+      .card--large {
+        grid-column: span 1;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main class="container">
-    <h1>pdvsn directory</h1>
-    <p class="intro">A tidy index for everything in this orbit. Same rough texture, just easier to browse.</p>
+    <h1>pdvsn</h1>
 
     <section class="directory" aria-label="site directory">
-      <a class="card" href="./films.html">
+      <a class="card" href="https://films.pdvsn.com" target="_blank" rel="noopener noreferrer">
         <h2>films</h2>
         <div class="info-box">Short films and visual pieces with direct watch links.</div>
       </a>
 
-      <a class="card" href="./projects.html">
-        <h2>projects</h2>
-        <div class="info-box">Builds, experiments, and active concepts in progress.</div>
+      <a class="card card--large" href="https://visits.pdvsn.com" target="_blank" rel="noopener noreferrer">
+        <h2>visits</h2>
+        <div class="info-box">Visit scheduling, info, and updates in one place.</div>
       </a>
 
       <a class="card" href="https://carbclub.pdvsn.com" target="_blank" rel="noopener noreferrer">
@@ -133,18 +134,8 @@
         <div class="info-box">External microsite for carb club updates and details.</div>
       </a>
 
-      <a class="card" href="https://rsvp.pdvsn.com" target="_blank" rel="noopener noreferrer">
-        <h2>rsvp</h2>
-        <div class="info-box">External RSVP page for upcoming events and invites.</div>
-      </a>
-
-      <a class="card" href="https://utilities.pdvsn.com" target="_blank" rel="noopener noreferrer">
-        <h2>ousley utilities</h2>
-        <div class="info-box">External utility tools and practical web helpers.</div>
-      </a>
-
       <a class="card" href="https://instagram.com/pdvsn99" target="_blank" rel="noopener noreferrer">
-        <h2>contact</h2>
+        <h2>instagram</h2>
         <div class="info-box">Reach out or follow along via Instagram.</div>
       </a>
     </section>
