@@ -2,78 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>films // pdvsn</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23F1668B'/></svg>">
   <style>
-    html, body {
-      height: 100%;
+    :root {
+      --pink: #F1668B;
+      --white: #fff;
+      --panel: rgba(255, 255, 255, 0.1);
+      --border: rgba(255, 255, 255, 0.7);
+    }
+
+    html,
+    body {
+      min-height: 100%;
       margin: 0;
-      background-color: #F1668B;
+      background-color: var(--pink);
       font-family: "Arial Narrow", Arial, sans-serif;
+      color: var(--white);
       -webkit-font-smoothing: none;
       -moz-osx-font-smoothing: grayscale;
       cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><rect width="8" height="8" fill="%23FFFFFF"/></svg>') 4 4, auto;
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100%;
-      text-align: center;
-      padding: 2rem;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 2.2rem 1.2rem 2.8rem;
       box-sizing: border-box;
     }
 
     h1 {
-      color: #fff;
-      font-size: 3rem;
-      margin: 0;
-      filter: blur(1.5px);
-      animation: fadeIn 1s ease-in-out;
+      margin: 0 0 0.8rem;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      filter: blur(1.4px);
     }
 
-    .links,
-    .films {
-      color: #fff;
-      font-size: 1rem;
-      margin-top: 1.5rem;
-      animation: fadeIn 1.5s ease-in-out;
-      filter: blur(1px);
+    .info-box {
+      border: 1px dashed var(--border);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.75rem;
+      margin-bottom: 1.2rem;
+      max-width: 560px;
+      filter: blur(0.8px);
+    }
+
+    .film-list {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .film-item {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      padding: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      filter: blur(0.8px);
     }
 
     a {
-      color: #fff;
+      color: var(--white);
       text-decoration: none;
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.75);
     }
 
     a:hover {
       text-decoration: underline;
+      filter: blur(0);
     }
 
-    .films div {
-      margin: 0.5rem 0;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .links {
+      margin-top: 1.4rem;
+      filter: blur(0.8px);
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <h1>films</h1>
 
-    <div class="films">
-      <div>Sloansy // <a href="https://www.youtube.com/watch?v=3D2MKY4uDA4" target="_blank" rel="noopener noreferrer">watch</a></div>
-      <div>Swimming With You // <a href="https://youtu.be/1Ty29yOT98E" target="_blank" rel="noopener noreferrer">watch</a></div>
-    </div>
+    <section class="info-box" aria-label="about films page">
+      This page is a direct directory of film releases, with one-click links to watch each project.
+    </section>
+
+    <section class="film-list" aria-label="films list">
+      <article class="film-item">
+        <span>Sloansy</span>
+        <a href="https://www.youtube.com/watch?v=3D2MKY4uDA4" target="_blank" rel="noopener noreferrer">watch</a>
+      </article>
+      <article class="film-item">
+        <span>Swimming With You</span>
+        <a href="https://youtu.be/1Ty29yOT98E" target="_blank" rel="noopener noreferrer">watch</a>
+      </article>
+    </section>
 
     <div class="links">
-      <a href="./index.html">home</a>
+      <a href="./index.html">&larr; back to directory</a>
     </div>
-  </div>
+  </main>
 </body>
 </html>
